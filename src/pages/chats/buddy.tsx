@@ -32,7 +32,7 @@ import axios from "axios";
 
 export function BuddyChattingPage() {
   const [{ user }] = useAppContext();
-  const socket = io(CONFIG.websocket_url, { autoConnect: true, transports: ["websocket"] });
+  const socket = io(CONFIG.websocket_url, { autoConnect: true });
   const { isOpen, onOpen, onClose } = createDisclosure();
   const [buddy, setBuddy] = createStore(
     {} as {
