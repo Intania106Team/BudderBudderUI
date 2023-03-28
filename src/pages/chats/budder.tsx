@@ -34,7 +34,7 @@ import axios from "axios";
 export function BudderChattingPage() {
   const [{ user }] = useAppContext();
   const { isOpen, onOpen, onClose } = createDisclosure();
-  const socket = io(CONFIG.websocket_url, { autoConnect: true, transports: ["websocket"] });
+  const socket = io(CONFIG.websocket_url, { autoConnect: true });
   const [budder, setBudder] = createStore(
     {} as { userId?: string; codename?: string }
   );
