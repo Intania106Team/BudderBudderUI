@@ -42,6 +42,7 @@ export function SelfProfilePage() {
       words?: string;
       desire?: string;
       depart?: string;
+      allergic?: string;
       interests?: string[];
     }[]
   >([]);
@@ -153,6 +154,16 @@ export function SelfProfilePage() {
                               <Td>
                                 <pre style={{ "white-space": "pre-wrap" }}>
                                   {person.words}
+                                </pre>
+                              </Td>
+                            </Tr>
+                          ) : undefined}
+                          {person.allergic ? (
+                            <Tr>
+                              <Td>สิ่งของที่แพ้</Td>
+                              <Td>
+                                <pre style={{ "white-space": "pre-wrap" }}>
+                                  {person.allergic}
                                 </pre>
                               </Td>
                             </Tr>
